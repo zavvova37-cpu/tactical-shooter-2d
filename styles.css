@@ -1,1 +1,166 @@
+:root {
+  color-scheme: dark;
+  --bg: #12161f;
+  --card: #1b2130;
+  --line: #2b3348;
+  --text: #e8edff;
+  --accent: #5db1ff;
+  --danger: #ff6868;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1e273a 0%, #10131b 70%);
+  color: var(--text);
+}
+
+.app {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 12px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.lobby {
+  background: color-mix(in srgb, var(--card) 94%, black);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+  margin-top: 12px;
+}
+
+.selectors {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 12px 0;
+}
+
+.team-select {
+  background: #121828;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.team-select h3 {
+  margin-top: 0;
+}
+
+.option-list {
+  display: grid;
+  gap: 8px;
+}
+
+.option-list label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px;
+  border-radius: 8px;
+  background: #1c2333;
+}
+
+button {
+  border: 1px solid #43608a;
+  color: var(--text);
+  background: #27344d;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-weight: 600;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.help {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.arena {
+  position: relative;
+  margin-top: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+canvas {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #0a0d13;
+}
+
+.mobile-ui {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.control-side {
+  width: 45%;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  pointer-events: auto;
+}
+
+.control-side.right {
+  justify-content: end;
+}
+
+.joystick {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 2px solid rgba(173, 200, 255, 0.5);
+  background: rgba(52, 72, 111, 0.25);
+  position: relative;
+  touch-action: none;
+}
+
+.stick {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(133, 181, 255, 0.85);
+  position: absolute;
+  left: 34px;
+  top: 34px;
+}
+
+.buttons {
+  display: grid;
+  gap: 8px;
+}
+
+.buttons button {
+  min-width: 84px;
+  background: rgba(31, 45, 70, 0.9);
+  border: 1px solid rgba(145, 187, 255, 0.5);
+}
+
+@media (max-width: 900px) {
+  .selectors {
+    grid-template-columns: 1fr;
+  }
+}
 
