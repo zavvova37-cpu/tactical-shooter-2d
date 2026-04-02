@@ -1,1 +1,58 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>2D Tactical Arena</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <h1>2D Tactical Arena</h1>
+        <div id="scoreboard">Счёт — Синие: 0 | Красные: 0</div>
+      </header>
+
+      <section id="lobby" class="lobby">
+        <h2>Выбор персонажей</h2>
+        <p>Выберите бойцов для каждой команды и нажмите «Начать матч».</p>
+        <div class="selectors">
+          <div class="team-select" id="teamASelect"></div>
+          <div class="team-select" id="teamBSelect"></div>
+        </div>
+        <button id="startBtn">Начать матч</button>
+        <p class="help">
+          ПК: Игрок A — WASD / F (огонь) / G (граната) / Q (смена оружия).<br />
+          Игрок B — Стрелки / K (огонь) / L (граната) / P (смена оружия).
+        </p>
+      </section>
+
+      <section id="arena" class="arena hidden">
+        <canvas id="gameCanvas" width="960" height="540"></canvas>
+
+        <div class="mobile-ui" id="mobileUI">
+          <div class="control-side left">
+            <div class="joystick" id="joyA"><div class="stick"></div></div>
+            <div class="buttons">
+              <button id="shootA">Огонь</button>
+              <button id="nadeA">Граната</button>
+              <button id="swapA">Оружие</button>
+            </div>
+          </div>
+
+          <div class="control-side right">
+            <div class="buttons">
+              <button id="shootB">Огонь</button>
+              <button id="nadeB">Граната</button>
+              <button id="swapB">Оружие</button>
+            </div>
+            <div class="joystick" id="joyB"><div class="stick"></div></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
 
